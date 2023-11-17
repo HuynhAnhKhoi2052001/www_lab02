@@ -6,7 +6,7 @@ import jakarta.persistence.Persistence;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("chanh2");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("lab_week_2");
         EntityManager em = emf.createEntityManager();
     }
 }
