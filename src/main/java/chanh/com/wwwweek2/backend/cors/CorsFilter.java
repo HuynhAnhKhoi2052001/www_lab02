@@ -48,12 +48,6 @@ public class CorsFilter implements ContainerRequestFilter, ContainerResponseFilt
         return allowedHeaders;
     }
 
-    /**
-     * Will allow all by default
-     * comma delimited string for Access-Control-Allow-Headers.
-     *
-     * @param allowedHeaders allowed headers
-     */
     public void setAllowedHeaders(String allowedHeaders)
     {
         this.allowedHeaders = allowedHeaders;
@@ -108,7 +102,6 @@ public class CorsFilter implements ContainerRequestFilter, ContainerResponseFilt
         String origin = requestContext.getHeaderString(CorsHeaders.ORIGIN);
         if (origin == null || requestContext.getMethod().equalsIgnoreCase("OPTIONS") || requestContext.getProperty("cors.failure") != null)
         {
-            // don't do anything if origin is null, its an OPTIONS request, or cors.failure is set
             return;
         }
         responseContext.getHeaders().putSingle(CorsHeaders.ACCESS_CONTROL_ALLOW_ORIGIN, origin);

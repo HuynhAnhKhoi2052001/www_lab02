@@ -9,8 +9,8 @@
         Email: <input name="email"><br/>
         Phone: <input name="phone"><br/>
         Addess: <input name="address"><br/>
-        <input type="submit" value="Insert">
-        <input type="reset" value="Clear">
+        <input type="submit" value="Insert"><br/>
+        <input type="reset" value="Clear"><br/>
     </form>
 </body>
 </html>

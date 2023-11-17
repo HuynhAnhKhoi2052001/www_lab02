@@ -1,9 +1,9 @@
 package chanh.com.wwwweek2.backend.enums;
 
 public enum ProductStatus {
-    ACTIVE(1),//đang kinh doanh
-    IN_ACTIVE(0), //tam ngung
-    TERMINATED(-1); //khong ban nua
+    ACTIVE(1),
+    IN_ACTIVE(0),
+    TERMINATED(-1);
     private int value;
 
     ProductStatus(int value) {

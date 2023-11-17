@@ -36,4 +36,33 @@ public class CustomerRepository {
     public List<Customer> getAllCust() {
         return em.createNamedQuery("Customer.getAll", Customer.class).getResultList();
     }
+
+    public void updateCust(Customer customer) {
+        try {
+            trans.begin();
+            em.merge(customer);
+            trans.commit();
+        } catch (Exception ex) {
+            trans.rollback();
+            logger.error(ex.getMessage());
+        }
+    }
+
+    public void deleteCust(long custId) {
+        try {
+            trans.begin();
+            Customer customer = em.find(Customer.class, custId);
+            if (customer != null) {
+                em.remove(customer);
+            }
+            trans.commit();
+        } catch (Exception ex) {
+            trans.rollback();
+            logger.error(ex.getMessage());
+        }
+    }
+
+    public Customer findCustById(long custId) {
+        return em.find(Customer.class, custId);
+    }
 }

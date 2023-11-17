@@ -10,10 +10,8 @@
 <%
     CustomerServices services = new CustomerServices();
     List<Customer> lst = services.getAll();
-
-//        List<Customer> lst1 = session.getAttribute("customers");
 %>
-<table width="80%" align="center">
+<table width="70%">
     <tr>
         <th>ID</th>
         <th>Name</th>

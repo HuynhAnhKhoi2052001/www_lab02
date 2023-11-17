@@ -35,8 +35,9 @@ public class ProductRepository {
             logger.error(e.getMessage());
         }
     }
-    public List<Product> getActiveProduct(){
-        return em.createNamedQuery("Product.findAll",Product.class)
+
+    public List<Product> getActiveProduct() {
+        return em.createNamedQuery("Product.findAll", Product.class)
                 .setParameter(1, ProductStatus.ACTIVE)
                 .getResultList();
     }
@@ -49,6 +50,20 @@ public class ProductRepository {
         try {
             trans.begin();
             em.merge(product);
+            trans.commit();
+        } catch (Exception e) {
+            trans.rollback();
+            logger.error(e.getMessage());
+        }
+    }
+
+    public void delete(long id) {
+        try {
+            trans.begin();
+            Product product = em.find(Product.class, id); // Tìm đối tượng theo ID
+            if (product != null) {
+                em.remove(product); // Xóa đối tượng nếu tồn tại
+            }
             trans.commit();
         } catch (Exception e) {
             trans.rollback();

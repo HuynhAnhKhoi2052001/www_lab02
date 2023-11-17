@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>INsert Products</title>
+    <title>Insert Products</title>
     <form action="controls?action=insert_products" method="post">
         Name: <input name="name"/><br/>
         Description:<input name="desc"/><br/>

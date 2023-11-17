@@ -3,7 +3,6 @@ package chanh.com.wwwweek2.backend.converters;
 import chanh.com.wwwweek2.backend.enums.EmployeeStatus;
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
-
 import java.util.stream.Stream;
 
 @Converter(autoApply = true)
@@ -20,7 +19,6 @@ public class EmployeeStatusConverter implements AttributeConverter<EmployeeStatu
         if (dbData == null) {
             return null;
         }
-
         return Stream.of(EmployeeStatus.values())
                 .filter(c -> c.getValue() == dbData)
                 .findFirst()

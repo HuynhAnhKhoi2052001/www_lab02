@@ -40,7 +40,6 @@ public class EmployeeRepository {
     public void setStatus(Employee employee, EmployeeStatus status) {
         employee.setStatus(status);
     }
-
     public void update(Employee employee) {
         try {
             trans.begin();

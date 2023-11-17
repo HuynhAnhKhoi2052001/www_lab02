@@ -5,7 +5,6 @@ public enum EmployeeStatus {
     IN_ACTIVE(0),
     TERMINATED(-1);
     private int value;
-
     EmployeeStatus(int value) {
         this.value = value;
     }

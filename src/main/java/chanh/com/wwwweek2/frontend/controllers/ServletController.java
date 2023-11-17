@@ -51,7 +51,7 @@ public class ServletController extends HttpServlet {
                     pm.deleteProduct(req, resp);
                 }
             } else {
-                resp.sendRedirect("NewEmpoyee.jsp");
+                resp.sendRedirect("Empoyee.jsp");
             }
         } catch (Exception ex) {
             ex.printStackTrace();
