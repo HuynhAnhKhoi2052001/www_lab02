@@ -9,5 +9,5 @@ MSSV:[20002111]
 ![customerlist](image/customerlist.png)
 4.Thêm sản phẩm:
 ![addproduct](image/addproduct.png)
-5.Thêm khách hàng:
-![addcustomer](image/addcustomer.png)
+5.Thêm nhân viên:
+![addcustomer](image/addemployee.png)
